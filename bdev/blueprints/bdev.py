@@ -10,9 +10,6 @@ bp = Blueprint('bdev', __name__)
 
 def connect_db():
     """Connects to the specific database."""
-    print("*"*80)
-    print("Base de datos " + current_app.config['DATABASE'])
-    print("*"*80)
     rv = sqlite3.connect(current_app.config['DATABASE'])
     rv.row_factory = sqlite3.Row
     return rv
