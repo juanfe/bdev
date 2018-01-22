@@ -31,12 +31,21 @@
 
          runsrv
 
+         the application will greet you on
+         http://localhost:3000/
+
          or
 
          flask run
 
          the application will greet you on
          http://localhost:5000/
+
+    ~ How create the database?
+
+      create the database in /tmp with:
+
+      sqlite3 /tmp/bdev.db < schema.sql
 
     ~ Is it tested?
 

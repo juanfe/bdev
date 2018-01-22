@@ -9,12 +9,14 @@ def create_app(config=None):
     app = Flask('bdev')
 
     app.config.update(dict(
-        DATABASE=os.path.join(app.root_path, 'bdev.db'),
+        # DATABASE=os.path.join(app.root_path, 'bdev.db'),
+        DATABASE=os.path.join('/tmp/', 'bdev.db'),
         DEBUG=True,
         SECRET_KEY=b'_5#y2L"F4Q8z\n\xec]/',
         USERNAME='admin',
         PASSWORD='abc123'
     ))
+
     app.config.update(config or {})
     app.config.from_envvar('FLASKR_SETTINGS', silent=True)
 
