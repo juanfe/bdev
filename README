@@ -19,6 +19,10 @@
 
          pip install --editable .
 
+         or
+
+         pip install -f requirements.txt
+
       3. instruct flask to use the right application
 
          export FLASK_APP="bdev.factory:create_app()"
@@ -43,9 +47,9 @@
 
     ~ How create the database?
 
-      create the database in /tmp with:
+      In the root of the application run:
 
-      sqlite3 /tmp/bdev.db < schema.sql
+      sqlite3 bdev.db < bdev/schema.sql
 
     ~ Is it tested?
 
