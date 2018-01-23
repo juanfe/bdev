@@ -52,6 +52,22 @@ def add_entry():
     return redirect(url_for('bdev.show_entries'))
 
 
+@bp.route('/del')
+def del_form():
+    return render_template('delete_entries.html')
+
+
+@bp.route('/delete', methods=['POST'])
+def del_entry():
+    if not session.get('logged_in'):
+        abort(401)
+    db = get_db()
+    db.execute("delete from entries where title like '%s'" %
+               request.form['title'])
+    db.commit()
+    return redirect(url_for('bdev.show_entries'))
+
+
 @bp.route('/login', methods=['GET', 'POST'])
 def login():
     error = None
