@@ -21,7 +21,7 @@
 
          or
 
-         pip install -f requirements.txt
+         pip install -r requirements.txt
 
       3. instruct flask to use the right application
 
@@ -49,7 +49,7 @@
 
       In the root of the application run:
 
-      sqlite3 bdev.db < bdev/schema.sql
+      sqlite3 bdev/bdev.db < bdev/schema.sql
 
     ~ Is it tested?
 
