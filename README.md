@@ -1,13 +1,13 @@
-                         / Bdev /
+# Bdev
 
-                 Test application to solve Back-end Bairesdev exam
+## Scaffold application for Flask
 
 
-    ~ What is bdev?
+### What is bdev?
 
-      A sqlite powered thumble blog application
+A sqlite powered thumble blog application
 
-    ~ How do I use it?
+### How do I use it?
 
       1. edit the configuration in the factory.py file or
          export a FLASKR_SETTINGS environment variable
@@ -45,13 +45,13 @@
          the application will greet you on
          http://localhost:5000/
 
-    ~ How create the database?
+### How create the database?
 
       In the root of the application run:
 
       sqlite3 bdev/bdev.db < bdev/schema.sql
 
-    ~ Is it tested?
+### Is it tested?
 
       You betcha.  Run `python setup.py test` to see
       the tests pass.
